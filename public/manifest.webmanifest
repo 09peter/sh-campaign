@@ -1,0 +1,13 @@
+{
+  "name": "Sledgehammer Crusade",
+  "short_name": "Crusade",
+  "description": "Warhammer 40K Crusade campaign manager — Sledgehammer gaming club, Vienna",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#101208",
+  "theme_color": "#101208",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

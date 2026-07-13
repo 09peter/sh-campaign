@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-void text-bone font-body antialiased;
+  background-image: radial-gradient(ellipse at 50% -20%, rgba(192,152,62,0.06), transparent 60%);
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-mono text-[11px] uppercase tracking-[0.22em] text-brass;
+  }
+  .panel {
+    @apply bg-panel border border-line rounded-sm;
+  }
+  .panel-head {
+    @apply flex items-center justify-between px-4 pt-3 pb-2 border-b border-line/60;
+  }
+  .h-display {
+    @apply font-display uppercase tracking-wide;
+  }
+  .btn {
+    @apply font-display uppercase tracking-wider text-sm px-4 py-1.5 rounded-sm border transition-colors
+           focus:outline-none focus-visible:ring-2 focus-visible:ring-brasslight disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+  .btn-primary { @apply btn bg-imperial border-imperial text-bone hover:bg-emberlight; }
+  .btn-brass   { @apply btn bg-transparent border-brass text-brasslight hover:bg-brass/10; }
+  .btn-ghost   { @apply btn bg-transparent border-line text-ash hover:text-bone hover:border-ash; }
+  .field {
+    @apply w-full bg-slate2 border border-line rounded-sm px-3 py-1.5 text-sm text-bone
+           placeholder:text-ash/60 focus:outline-none focus:border-brass;
+  }
+  .lbl { @apply block font-mono text-[11px] uppercase tracking-[0.18em] text-ash mb-1; }
+  .badge { @apply inline-block font-mono text-[10px] uppercase tracking-widest px-2 py-0.5 rounded-sm border; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
